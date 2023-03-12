@@ -1,4 +1,6 @@
-FROM eclipse-temurin:11
-RUN mkdir /app
-COPY target/logisticservice-1.0.jar /app
-CMD ["java", "-jar", "/app/logisticservice-1.0.jar","--spring.profiles.active=production"]
+FROM openjdk:8-jdk-alpine
+WORKDIR /app
+COPY . /app
+RUN mvn package
+EXPOSE 22100
+CMD ["java", "-jar", "target/search-engine-0.1.jar"]
