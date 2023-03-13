@@ -34,4 +34,9 @@ public class CommentServiceImpl implements CommentService {
     public Comment update(Comment comment) {
         return commentRepository.save(comment);
     }
+
+    @Override
+    public List<Comment> findByTextContaining(String text) {
+        return commentRepository.findByTextContaining(text);
+    }
 }

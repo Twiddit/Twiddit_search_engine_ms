@@ -35,4 +35,9 @@ public class TwidditServiceImpl implements TwidditService {
     public Twiddit update(Twiddit twiddit) {
         return twidditRepository.save(twiddit);
     }
+
+    @Override
+    public List<Twiddit> findByTextContaining(String text) {
+        return twidditRepository.findByTextContaining(text);
+    }
 }

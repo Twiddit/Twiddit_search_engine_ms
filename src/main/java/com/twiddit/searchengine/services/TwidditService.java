@@ -14,4 +14,6 @@ public interface TwidditService {
     Twiddit create(Twiddit twiddit);
 
     Twiddit update(Twiddit twiddit);
+
+    List<Twiddit> findByTextContaining(String text);
 }
