@@ -32,6 +32,11 @@ public class TwidditController {
         return ResponseEntity.status(HttpStatus.OK).body(twidditService.findByTextContaining(text));
     }
 
+    @GetMapping("findTrent/{text}")
+    private ResponseEntity<List<Twiddit>> findTrent(@PathVariable String text){
+        return ResponseEntity.status(HttpStatus.OK).body(twidditService.findByTextContaining(text));
+    }
+
 
 
 }
