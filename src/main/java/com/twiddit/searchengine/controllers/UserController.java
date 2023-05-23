@@ -30,9 +30,10 @@ public class UserController {
         return ResponseEntity.status(HttpStatus.OK).body(userService.create(user));
     }
 
+
     @GetMapping("findByText/{text}")
     private ResponseEntity<List<User>> findByText(@PathVariable String text){
-        return ResponseEntity.status(HttpStatus.OK).body(userService.findAll());
+        return ResponseEntity.status(HttpStatus.OK).body(userService.findByUserNameContaining(text));
     }
 
 }

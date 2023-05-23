@@ -15,12 +15,13 @@ import java.util.Date;
 @Document("twiddits")
 public class Twiddit {
     @Id
-    private String idTwiddit;
+    private String _id;
     private String text;
-   // private Date creationDate;
+
+    private Date creationDate;
     private int userId;
     @Field(name = "communidditsId")
-    private String idCommuniddits;
+    private String communidditsId;
     private String retwidditId;
     @Field(name = "imageURL1")
     private String image1;
